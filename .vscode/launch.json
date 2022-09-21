@@ -1,0 +1,13 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "edge",
+			"type": "msedge",
+			"request": "launch",
+			"url": "http://localhost:3000",
+			"webRoot": "${workspaceFolder}/apps/web/src",
+			"preLaunchTask": "npm: dev",
+		}
+	]
+}

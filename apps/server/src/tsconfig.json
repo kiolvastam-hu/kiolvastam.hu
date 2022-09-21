@@ -1,0 +1,21 @@
+ {
+   "ts-node": {
+     "files":true
+   },
+   "compilerOptions": {
+     "rootDir": ".",
+     "outDir": "../dist/",
+     "resolveJsonModule": true,
+     "experimentalDecorators": true,
+     "esModuleInterop": true,
+     "emitDecoratorMetadata": true,
+     "skipLibCheck": true,
+     "target":"es6",
+     "module":"CommonJS",
+     "strict": true
+
+   },
+   "references": [      // this is how we declare a dependency from
+     { "path": "../" }  // this project to the one at the root dir`
+   ]
+ }

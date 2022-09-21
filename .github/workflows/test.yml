@@ -1,0 +1,25 @@
+# Github action to test the code on every push
+
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+      - init-test
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 17
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17
+          cache: "yarn"
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.7.0
+      - run: yarn install --frozen-lockfile
+      - run: yarn run:test

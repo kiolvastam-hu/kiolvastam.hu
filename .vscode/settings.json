@@ -1,0 +1,20 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		"**/.turbo": true,
+		"**/.next": true,
+		"**/.vercel": true,
+		"**/node_modules": true,
+		".devcontainer": true,
+		"apps/server/dist": true,
+		// "apps/server/newman": true,
+		// "apps/server/swagger": true,
+		"apps/server/coverage": true,
+		"apps/server/.nyc_output": true,
+	}
+}

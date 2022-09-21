@@ -1,0 +1,4 @@
+# kiolvastam.hu
+
+Olvasónapló webalkalmazás
+

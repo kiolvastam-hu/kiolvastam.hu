@@ -1,0 +1,17 @@
+on:
+  push: 
+    paths:
+      - .github/workflows/todos.yml
+      - "*.xit"
+
+jobs:
+  sync-todos:
+    runs-on: 'ubuntu-latest'
+    name: Sync .xit file to Default project
+    steps:
+      - name: Sync todos
+        uses: matyifkbt/xit-action@master
+        with:
+          repo: ${{ github.event.repository.name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: dev.xit

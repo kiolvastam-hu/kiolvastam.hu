@@ -1,0 +1,33 @@
+{
+  "name": "kiolvastam.hu",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "web": "turbo run dev --scope=web",
+    "web:prod": "turbo run build --scope=web && turbo run start --scope=web",
+    "server": "turbo run dev --scope=server",
+    "server:prod": "turbo run build --scope=server && turbo run start --scope=server",
+    "seed": "turbo run seed --scope=server",
+    "test":"turbo run test --scope=server",
+    "prerun:test":"yarn seed",
+    "run:test":"start-server-and-test dev http://localhost:3030/healthcheck test"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.6.0",
+    "prettier": "^2.5.1",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "yarn@1.22.15"
+}
